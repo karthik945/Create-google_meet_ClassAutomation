@@ -24,10 +24,10 @@ links = {
 timetable = ["00:00,10:30","10:30,11:30","11:30,12:30","12:30,13:00","13:00,14:00","14:00,15:00","15:00,16:00"]
 
 day = str(time.strftime("%A"))
-day = "Monday"
-#time_now = str(time.strftime("%H:%M"))
+#day = "Monday"
+time_now = str(time.strftime("%H:%M"))
 #time_now = input("Enter time : ")
-time_now = "09:40"
+#time_now = "09:40"
 print(time_now)
 
 def open_link(url):
@@ -46,8 +46,8 @@ for j in range(start,len(timetable)):
 	print(f"Opening Link for Class : {links[classes[day][j]]}")
 	open_link(links[classes[day][j]])
 	while True:
-		#time_now = str(time.strftime("%H:%M"))
-		time_now = input("Enter time : ")
+		time_now = str(time.strftime("%H:%M"))
+		#time_now = input("Enter time : ")
 		print(f"Class {classes[day][j]} going On")
 		if time_now >= timetable[j].split(",")[1]:
 			print("Next Class")
